@@ -10,12 +10,10 @@ public class Rotate : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.A))
             {
-
                 transform.Rotate(0f, Time.deltaTime * rotationSpeed, 0f);
             }
             if (Input.GetKey(KeyCode.D))
             {
-
                 transform.Rotate(0f, -1 * Time.deltaTime * rotationSpeed, 0f);
             }
         }
