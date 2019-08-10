@@ -11,7 +11,6 @@ public class Player : MonoBehaviour
     public Text pointsText;
     public GameObject pauseMenuUI , startMenuUI;
     public static bool isPaused = true;
-    public float helixHealth = 30f;
 
     int pointsCounter = 0;
 
@@ -36,13 +35,8 @@ public class Player : MonoBehaviour
     {
         rb.velocity = Vector3.up * speed;
         if (collision.relativeVelocity.magnitude >= 14)
-        {
-            helixHealth = 0;
-        }
-        if (helixHealth<=0)
-        {
+        {   
             collision.gameObject.transform.parent.gameObject.SetActive(false);
-            helixHealth = 30f;
             return;
         }
         if (collision.gameObject.tag == "lose")
